@@ -10,8 +10,9 @@
         <!-- 导入样式 -->
         <link rel="stylesheet" href="../../css/reset.css">
         <link rel="stylesheet" href="../../css/common.css">
-        <link rel="stylesheet" href="../../css/shopcart.css">
-    </head>
+        <link rel="stylesheet" href="../../css/magnifier.css">
+        <link rel="stylesheet" href="../../css/productDetail.css">
+	</head>
 	<body>
         <!-- 1.顶部 -->
         <div class="topbar">
@@ -30,7 +31,7 @@
                     <button>我的订单</button>
                 </div>
                 <!-- 搜索框 -->
-                <div class="search-input fr">
+                <div class="search-input fr clearfix">
                     <input class="search" placeholder="创意文具" type="text">
                     <span></span>
                 </div>
@@ -39,81 +40,73 @@
             <div class="category-menu clearfix">
                 <!-- 左侧 -->
                 <div class="left-logo fl">
-                    <img src="../../img/logo.jpg">
+                    <img src="../../img/logo.jpg" >
                 </div>
                 <!-- 右侧 -->
                 <ul class="fr clearfix">
                     <li>图书</li>
                     <li>电子书</li>
-                    <li>原创文学</li>
+                    <li>原创文字</li>
                     <li>服装</li>
                     <li>运动户外</li>
                     <li>孕婴童</li>
                     <li>家居</li>
-                    <li>创意文具</li>
+                    <li>创意文字</li>
                     <li>地方特产</li>
-                    <li>海外购</li>
+                    <li>海外淘</li>
                     <li>电器城</li>
                 </ul>
             </div>
         </div>
 
-
-        <div class="shopcart container">
-            <!-- 全部商品 -->
-            <h3>全部商品（<i class="goodsCount"> 2 </i>&nbsp;)</h3>
-            <!-- 表格 -->
-            <table>
-                <thead>
-                    <tr>
-                        <th><input type="checkbox">全选</th>
-                        <th>商品</th>
-                        <th>单价</th>
-                        <th>数量</th>
-                        <th>小计</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>
-                            <img src="../../img/ebooks.jpg" alt="">从你的全世界路过
-                        </td>
-                        <td class="price">41.00</td>
-                        <td>
-                            <button class="add">+</button>
-                            <input type="text" value="1">
-                            <button class="reduce">-</button>
-                        </td>
-                        <td class="subprice">41.00</td>
-                        <td class="del">删除</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>
-                            <img src="../../img/ebooks.jpg" alt="">从你的全世界路过
-                        </td>
-                        <td class="price">11.00</td>
-                        <td>
-                            <button class="add">+</button>
-                            <input type="text" value="1">
-                            <button class="reduce">-</button>
-                        </td>
-                        <td class="subprice">11.00</td>
-                        <td class="del">删除</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="totalPrice">
-                <input type="checkbox">全选    
-                <span>删除选中商品</span> 
-                 <span>已选择 <i class="count">0 </i>&nbsp;件商品</span> 
-                 <span><i class="total">总价：00.00 </i></span>  
-                 <button>去结算</button>
+        <div class="product-detail container clearfix">
+            <div class="left-box fl">
+                <!-- 放大镜容器 -->
+                <div class="magnifier" id="magnifier1">
+                    <div class="magnifier-container">
+                        <div class="images-cover"></div>
+                        <!--当前图片显示容器-->
+                        <div class="move-view"></div>
+                        <!--跟随鼠标移动的盒子-->
+                    </div>
+                    <div class="magnifier-assembly">
+                        <div class="magnifier-btn">
+                            <span class="magnifier-btn-left">&lt;</span>
+                            <span class="magnifier-btn-right">&gt;</span>
+                        </div>
+                        <!--按钮组-->
+                        <div class="magnifier-line">
+                            <ul class="clearfix animation03">
+                                <li>
+                                    <div class="small-img">
+                                        <img src="../../img/ebooks1.png" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="small-img">
+                                        <img src="../../img/ebooks2.png" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="small-img">
+                                        <img src="../../img/ebooks3.png" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="small-img">
+                                        <img src="../../img/ebooks4.png" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--缩略图-->
+                    </div>
+                    <div class="magnifier-view"></div>
+                    <!--经过放大的图片显示容器-->
+                </div>
             </div>
+            <div class="right-box fr"></div>
+            
         </div>
         
         <!-- 11.尾部 -->
@@ -192,12 +185,11 @@
                     2004-2016.&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;&nbsp;&nbsp;&nbsp;Rights&nbsp;&nbsp;&nbsp;&nbsp;Reserved</p>
             </div>
         </div>
-
-       
-
         <!-- 引入jquery.min.js -->
-        <script src="../../js/jquery.min.js"></script>
-        <script src="../../js/shopcart.js"></script>
+        <script src="../../js/jquery-1.11.0.js"></script>
+        <script src="../../js/productDetail.js"></script>
+        <script src="../../js/magnifier.js"></script>
 
-    </body>
+        
+	</body>
 </html>
