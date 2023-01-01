@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3842781 */
+  src: url('iconfont.woff2?t=1672210755856') format('woff2'),
+       url('iconfont.woff?t=1672210755856') format('woff'),
+       url('iconfont.ttf?t=1672210755856') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-star-half:before {
+  content: "\e9a2";
+}
+
+.icon-star-full:before {
+  content: "\e9a1";
+}
+
